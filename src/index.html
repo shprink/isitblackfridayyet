@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Is It Black Friday Yet?</title>
+    <meta
+      name="Description"
+      content="Is It Black Friday Yet? Do not miss Black Friday anymore thanks to this online reminder."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@julienrenaux" />
+    <meta name="twitter:title" content="Is It Black Friday Yet?" />
+    <meta
+      name="twitter:description"
+      content="Is It Black Friday Yet? Do not miss Black Friday anymore thanks to this online reminder."
+    />
+    <meta
+      name="twitter:image"
+      content="https://isitblackfridayyet.app/assets/share.png"
+    />
+    <meta
+      property="og:image"
+      content="https://isitblackfridayyet.app/assets/share.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="isItBlackFridayYet" />
+    <meta property="og:title" content="Is It Black Friday Yet" />
+    <meta
+      property="og:description"
+      content="Is It Black Friday Yet? Do not miss Black Friday anymore thanks to this online reminder. "
+    />
+    <meta property="og:url" content="https://isitblackfridayyet.app" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="theme-color" content="#16161d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+
+    <script type="module" src="/build/app.esm.js"></script>
+    <script nomodule src="/build/app.js"></script>
+    <link href="/build/app.css" rel="stylesheet" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="mask-icon"
+      href="/assets/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="/assets/favicons/browserconfig.xml"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-7727182-9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-7727182-9');
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p style="margin-left: 10px">JavaScript MUST be enabled.</p>
+    </noscript>
+    <app-root></app-root>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+  </body>
+</html>
