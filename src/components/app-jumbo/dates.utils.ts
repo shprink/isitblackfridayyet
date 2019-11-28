@@ -23,6 +23,11 @@ export function isItBlackFriday(date: Date): "Yes" | "No" {
 
 export function isItSoon(today: Date) {
   let blackFridayDate = getBlackFridayDate(getYear(today));
+
+  if (isSameDay(today, blackFridayDate)) {
+    return `Enjoy 🎉`;
+  }
+
   if (today > blackFridayDate && !isToday(blackFridayDate)) {
     blackFridayDate = getBlackFridayDate(getYear(today) + 1);
   }
@@ -32,11 +37,6 @@ export function isItSoon(today: Date) {
     return `And you need to wait ${diffInDays} more days ⏰...`;
   } else if (diffInDays > 1) {
     return `But soon! Only ${diffInDays} days left 😱!`;
-  } else if (diffInDays === 1) {
-    return `It is tomorrow, be ready 😱😱😱!`;
-  } else if (diffInDays < 0) {
-    return `It is tomorrow, be ready 😱😱😱!`;
-  } else {
-    return `Enjoy 🎉`;
   }
+  return `It is tomorrow, be ready 😱😱😱!`;
 }

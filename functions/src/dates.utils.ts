@@ -4,8 +4,7 @@ import {
   addWeeks,
   isSameDay,
   getYear,
-  differenceInCalendarDays,
-  isToday
+  differenceInCalendarDays
 } from "date-fns";
 
 import { screamImg, tadaImg, clockImg } from "./emojis";
@@ -26,7 +25,12 @@ export function isItBlackFriday(date: Date): "Yes" | "No" {
 
 export function isItSoon(today: Date) {
   let blackFridayDate = getBlackFridayDate(getYear(today));
-  if (today > blackFridayDate && !isToday(blackFridayDate)) {
+
+  if (isSameDay(today, blackFridayDate)) {
+    return `Enjoy ${tadaImg}`;
+  }
+
+  if (today > blackFridayDate) {
     blackFridayDate = getBlackFridayDate(getYear(today) + 1);
   }
   const diffInDays = differenceInCalendarDays(blackFridayDate, today);
@@ -35,11 +39,6 @@ export function isItSoon(today: Date) {
     return `And you need to wait ${diffInDays} more days ${clockImg}...`;
   } else if (diffInDays > 1) {
     return `But soon! Only ${diffInDays} days left ${screamImg}!`;
-  } else if (diffInDays === 1) {
-    return `It is tomorrow, be ready ${screamImg}${screamImg}${screamImg}!`;
-  } else if (diffInDays < 0) {
-    return `It is tomorrow, be ready ${screamImg}${screamImg}${screamImg}!`;
-  } else {
-    return `Enjoy ${tadaImg}`;
   }
+  return `It is tomorrow, be ready ${screamImg}${screamImg}${screamImg}!`;
 }
