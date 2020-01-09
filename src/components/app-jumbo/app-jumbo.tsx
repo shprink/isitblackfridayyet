@@ -10,12 +10,29 @@ import { getBlackFridayDate, isItBlackFriday, isItSoon } from "./dates.utils";
     }
     .title {
       font-size: 9rem;
-      color: var(--title-color, black);
+      color: var(--light-color);
     }
     .title small {
       display: block;
       font-size: 20%;
-      color: var(--subtitle-color, grey);
+      color: var(--light-subtitle-color);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .title {
+        color: var(--dark-color);
+      }
+      .title small {
+        color: var(--dark-subtitle-color);
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      .title {
+        color: var(--light-color);
+      }
+      .title small {
+        color: var(--light-subtitle-color);
+      }
     }
   `,
   shadow: true

@@ -6,6 +6,30 @@ import { Component, h } from "@stencil/core";
     :host {
       font-size: 1rem;
     }
+
+    a {
+      color: var(--light-link-color);
+    }
+    a:hover {
+      color: var(--light-link-hover-color);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      a {
+        color: var(--dark-link-color);
+      }
+      a:hover {
+        color: var(--dark-link-hover-color);
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      a {
+        color: var(--light-link-color);
+      }
+      a:hover {
+        color: var(--light-link-hover-color);
+      }
+    }
   `,
   shadow: true
 })

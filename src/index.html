@@ -85,10 +85,24 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'UA-7727182-9');
+      gtag("config", "UA-7727182-9");
     </script>
+    <style>
+      :root {
+        --light-bg-color: white;
+        --light-color: black;
+        --light-subtitle-color: grey;
+        --light-link-color: var(--light-color);
+        --light-link-hover-color: blue;
+        --dark-bg-color: black;
+        --dark-color: white;
+        --dark-subtitle-color: grey;
+        --dark-link-color: var(--dark-color);
+        --dark-link-hover-color: #a7a7ff;
+      }
+    </style>
   </head>
   <body>
     <noscript>
@@ -100,10 +114,10 @@
     </script>
     <script>
       // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
+      if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
         });
       }
     </script>
